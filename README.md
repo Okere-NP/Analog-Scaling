@@ -36,5 +36,3 @@ This block scales an analog `INPUT` from the raw range `[X_MIN_INPUT, X_MAX_INPU
 OUTPUT = ((INPUT - X_MIN_INPUT) * (Y_MAX_OUTPUT - Y_MIN_OUTPUT)) 
          / (X_MAX_INPUT - X_MIN_INPUT) 
          + Y_MIN_OUTPUT
-
----
