@@ -32,7 +32,12 @@ The block takes a raw analog input value (e.g., from a sensor or transmitter), a
 
 ## 🧮 Scaling Formula
 
-```pascal
-OUTPUT := ((INPUT - X_MIN_INPUT) * (Y_MAX_OUTPUT - Y_MIN_OUTPUT)) 
-          / (X_MAX_INPUT - X_MIN_INPUT) 
-          + Y_MIN_OUTPUT;
+The scaling formula used in this block is:
+
+\[
+\text{OUTPUT} = \left( \frac{\text{INPUT} - \text{X\_MIN\_INPUT}}{\text{X\_MAX\_INPUT} - \text{X\_MIN\_INPUT}} \right) \times (\text{Y\_MAX\_OUTPUT} - \text{Y\_MIN\_OUTPUT}) + \text{Y\_MIN\_OUTPUT}
+\]
+
+This maps the `INPUT` value proportionally from the PLC raw range to the instrument value range.
+
+---
